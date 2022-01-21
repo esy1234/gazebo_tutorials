@@ -87,6 +87,25 @@
           </geometry>
         </visual>
       </link>
+      <!-- Each joint must have a unique name -->
+      <joint name="base_joint_top" type="revolute">
+        <!-- Position the joint at the bottom of the top link -->
+        <pose>0 0 -0.036785 0 0 0</pose>
+        <parent>base</parent>
+        <child>top</child>
+
+        <!-- The axis defines the joint's degree of freedom -->
+        <axis>
+          <!-- Revolve around the z-axis -->
+          <xyz>0 0 1</xyz>
+          <!-- Limit refers to the range of motion of the joint -->
+          <limit>
+            <!-- Use a very large number to indicate a continuous revolution -->
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+          </limit>
+        </axis>
+      </joint>
     </model>
   </world>
 </sdf>
