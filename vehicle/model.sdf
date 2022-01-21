@@ -526,6 +526,23 @@
         </ode>
       </physics>
     </joint>
+    <joint name='link_0_JOINT_3' type='fixed'>
+      <parent>link_0</parent>
+      <child>depth_camera::link</child>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <physics>
+        <ode>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+          <suspension>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </suspension>
+        </ode>
+      </physics>
+    </joint>
     <static>0</static>
     <allow_auto_disable>1</allow_auto_disable>
   </model>
