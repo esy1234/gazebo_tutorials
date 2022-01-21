@@ -27,7 +27,6 @@
             <iyz>0</iyz>
             <izz>0.00109244</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <collision name="base_collision">
           <geometry>
