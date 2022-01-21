@@ -37,6 +37,34 @@
           </geometry>
         </visual>
       </link>
+
+      <!-- Give the top link a unique name -->
+      <link name="top">
+        <!-- Vertically offset the top cylinder by
+             the length of the bottom cylinder
+             and half the length of this cylinder
+             and clearance 2.2mm -->
+        <pose>0 0 0.097655 0 0 0</pose>
+        <collision name="top_collision">
+          <geometry>
+            <cylinder>
+              <!-- Radius and length provided by Velodyne -->
+              <radius>0.04267</radius>
+              <length>0.07357</length>
+            </cylinder>
+          </geometry>
+        </collision>
+
+        <!-- The visual is mostly a copy of the collision -->
+        <visual name="top_visual">
+          <geometry>
+            <cylinder>
+              <radius>0.04267</radius>
+              <length>0.07357</length>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>
     </model>
   </world>
 </sdf>
